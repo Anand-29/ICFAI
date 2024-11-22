@@ -1,0 +1,343 @@
+Q1. Student structure
+
+Write a C program to generate student mark sheets with subject details and grades using Structure. GRADE CALCULATION: 1)if avg>70 the grade will be 1 2)if avg 50 to 70 the grade will be 2 3)if avg is below 50 the grade will be 3 (Note: rn- Roll Number, s-Subjects, avg- Average)
+
+Input (stdin)
+
+2
+12
+65
+
+65
+78
+65
+89
+
+
+
+56
+89
+09
+76
+65
+34
+Output (stdout)
+
+STUDENT MARKSHEET USING STRUCTURES
+Enter the no of students
+
+rn s1 s2 s3 s4 s5 avg grade
+
+12 65 65 78 65 89 72.00 1
+56 89 9 76 65 34 54.00 2
+
+***************************************************************************************
+
+Q2. Employee Structure
+
+Write a C program to create a structure called employee with name, employee id, name, age designation and salary as data members. Accept employee details and display it.
+
+Input (stdin)
+
+Rajarajan
+1
+24
+Manager
+20000
+Output (stdout)
+
+Enter name:
+Enter ID:
+Enter age:
+Enter designation:
+Enter Salary:
+Employee Details
+Name of the Employee:Rajarajan
+ID of the Employee:1
+Age of the Employee:24
+Designation of the employee:Manager
+Salary of the Employee:20000
+
+*******************************************************************************************
+
+Q3. Employee Payroll structure
+
+Write a C program to generate employee payroll using structures.
+
+Input (stdin)
+
+2
+101
+Rajkumar
+5000 500
+300 500
+1000 400
+102
+Ramkumar
+3000 200
+300 500
+800 200
+101
+Output (stdout)
+
+Enter the number of employees:
+Enter your input for every employee:
+Employee ID:
+Employee Name:
+Basic salary,HRA:
+DA,Medical Allowance:
+PF and Insurance:Employee ID:
+Employee Name:
+Basic salary,HRA:
+DA,Medical Allowance:
+PF and Insurance:Enter employee ID to get payslip:
+Salary slip of Rajkumar:
+Employee ID:101
+Basic Salary:5000
+House Rent Allowance:500
+Dearness Allowance:300
+Medical Allowance:500
+Gross Salary:75600.00 Rupees
+Deductions:
+Provident fund:1000
+Insurance:400
+Net Salary:58800.00 Rupees
+
+#######################
+
+1
+
+ 
+
+#include <stdio.h>
+
+struct student
+
+        {
+
+  int rn;
+
+  int s1,s2,s3,s4,s5;
+
+        };
+
+int main()
+
+{
+
+printf("STUDENT MARKSHEET USING STRUCTURES\n");
+
+  int n;
+
+  printf("Enter the no of students\n");
+
+  scanf("%d",&n);
+
+  struct student s[n];
+
+   float avg=0.0;
+
+  int grade=0;
+
+  for(int i=0;i<n;i++){
+
+  scanf("\n%d %d %d %d %d %d",&s[i].rn, &s[i].s1, &s[i].s2, &s[i].s3, &s[i].s4, &s[i].s5);
+
+  }
+
+  printf("\nrn s1 s2 s3 s4 s5 avg grade\n");
+
+    for(int i=0;i<n;i++){
+
+    avg=(s[i].s1+s[i].s2+s[i].s3+s[i].s4+s[i].s5)/5;
+
+    if(avg>70.00) grade=1;
+
+    else if(avg>50.00 && avg<=70.00) grade=2;
+
+    else if(avg<=50.00) grade=3;
+
+    printf("\n%d %d %d %d %d %d %.2f %d",s[i].rn,s[i].s1,s[i].s2,s[i].s3,s[i].s4,s[i].s5,avg,grade);
+
+      avg=0;
+
+      grade=0;
+
+  }
+
+   return 0;
+
+}
+
+ 
+
+############################
+
+2
+
+ 
+
+#include<stdio.h>
+
+struct employee{
+
+char name[100];
+
+  int id,age;
+
+  char desg[100];
+
+  int sal;
+
+};
+
+int main(){
+
+struct employee e;
+
+  printf("Enter name:\nEnter ID:\nEnter age:\nEnter designation:\nEnter Salary:\n");
+
+  scanf("%s",&e.name);
+
+  scanf("%d %d %s %d",&e.id,&e.age,&e.desg,&e.sal);
+
+   printf("Employee Details");
+
+  printf("\nName of the Employee:%s",e.name);
+
+  printf("\nID of the Employee:%d",e.id);
+
+  printf("\nAge of the Employee:%d",e.age);
+
+  printf("\nDesignation of the employee:%s",e.desg);
+
+printf("\nSalary of the Employee:%d",e.sal);
+
+}
+
+ 
+
+#################################
+
+3
+
+ 
+
+#include <stdio.h>
+
+struct employee{
+
+int id,sal,hra,da,med,pf,ins;
+
+ char name[100];
+
+}emp;
+
+int main(){
+
+int n;
+
+  printf("Enter the number of employees:");
+
+  scanf("%d",&n);
+
+  struct employee e[n];
+
+  printf("\nEnter your input for every employee:\n");
+
+  for(int i=0;i<n;i++)
+
+  {
+
+               printf("Employee ID: ");
+
+    scanf("%d",&e[i].id);
+
+   
+
+    printf("\nEmployee Name: ");
+
+    scanf("%s",&e[i].name);
+
+   
+
+    printf("\nBasic salary,HRA: ");
+
+    scanf("%d",&e[i].sal);
+
+    scanf("%d",&e[i].hra);
+
+   
+
+    printf("\nDA,Medical Allowance: ");
+
+    scanf("%d",&e[i].da);
+
+    scanf("%d",&e[i].med);
+
+   
+
+    printf("\nPF and Insurance:");
+
+    scanf("%d",&e[i].pf);   
+
+    scanf("%d",&e[i].ins);
+
+ 
+
+  }
+
+  int payslip_id;
+
+  printf("Enter employee ID to get payslip: ");
+
+  scanf("%d",&payslip_id);
+
+ 
+
+  for(int i=0;i<n;i++)
+
+  {
+
+    if(e[i].id==payslip_id)
+
+    {
+
+      printf("\nSalary slip of %s:",e[i].name);
+
+      printf("\nEmployee ID:%d",e[i].id);
+
+      printf("\nBasic Salary:%d",e[i].sal);
+
+      printf("\nHouse Rent Allowance:%d",e[i].hra);
+
+      printf("\nDearness Allowance:%d",e[i].da);
+
+      printf("\nMedical Allowance:%d",e[i].med);
+
+      float g_sal=75600.00;
+
+      printf("\nGross Salary:%.2f Rupees",g_sal);
+
+      float net_sal;
+
+      net_sal=12*e[i].sal-(e[i].hra+e[i].da+e[i].med)+100;
+
+      printf("\nDeductions: ");
+
+      printf("\nProvident fund:1000\nInsurance:400");
+
+      printf("\nNet Salary:%.2f Rupees",net_sal);
+
+     break;
+
+    }
+
+  }
+
+  return 0;
+
+}
+
+ 
+
