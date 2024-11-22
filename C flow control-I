@@ -1,0 +1,419 @@
+Q-1 : Paintings
+
+A wall is of length L and breadth B. Raj is trying to fit two rectangular paintings in it. He wants to fit these paintings on the wall such that they do not overlap on each other or they should not occupy space outside the area of the wall. He also knows the length and breadth of both the paintings. Help him in finding whether the two paintings can fit onto the wall properly or not. INPUT & OUTPUT FORMAT: Input consists of 6 integers. First and second input corresponds to the length and breadth of the wall. Third and fourth input corresponds to the length and breadth of the first painting. Fifth and sixth input corresponds to the length and breadth of the second painting. If both the paintings can be fixed on the wall, display “Raj can fix both painting” or display “Raj cannot fix both painting”.
+
+SAMPLE INPUT:
+
+8
+
+8
+
+3
+
+2
+
+4
+
+4
+
+SAMPLE OUTPUT:
+
+Raj can fix both painting
+
+Input (stdin)
+
+8
+2
+3
+4
+5
+9
+Output (stdout)
+
+Raj cannot fix both painting
+
+***************************************************************************************************
+
+Q-2 : Savings and Expenses
+
+Ramu after finishing his degree joined a company in Bangalore. His manager has told him that he will get an increment if he works hard. As he belongs to a middle-class family, he wants to plan the budget according to his salary. He stays in a hostel. His expenses are hostel fees, bank loan interest. He wants to find out whether he can save any money or he wants to work hard or his salary will be able to manage his expenses alone. Help him in calculating the budget. INPUT & OUTPUT FORMAT: Input consists of 5 integers. First input corresponds to salary, second input corresponds to the amount he pays to the bank, third input corresponds to hostel fees, fourth input corresponds to food expenses and fifth input corresponds to the amount he sends to his parents. If he can save money out of his expenses display “He can save the money” or if he can manage his expenses alone display “He can manage the expenses” or else display “He wants to work hard”.
+
+SAMPLE INPUT:
+
+10000
+
+5000
+
+4000
+
+1500
+
+5000
+
+SAMPLE OUTPUT:
+
+He has to work hard
+
+Case 2
+
+Input (stdin)
+
+25000
+5000
+4000
+1500
+5000
+
+
+Output (stdout)
+
+He can save the money
+
+***************************************************************************************************
+
+Q-3 : Online shopping
+
+Arun wants to buy a shirt. As he is very lazy, he decided to buy the shirt online. He chooses a shirt in Flipkart and is surprised to see the same shirt in Amazon and Snapdeal as well. So he decided to buy the shirt from the website which offers it at the least price. The price of the shirt, discount % and the shipping charges of all three websites have been given as input. Help him in calculating the price of the shirt in each website and decide which website has the lowest price. INPUT & OUTPUT FORMAT: Input consist of 9 integers. First three input corresponds to Flipkart details such as the amount of the shirt, discount offered and shipping charges. Next three input corresponds to Snapdeal details such as the amount of shirt, discount offered and shipping charge. Last three input corresponds to amazon details such as the amount of shirt, discount offered and shipping charge.
+
+SAMPLE INPUT:                                                                                                                                                                            
+
+1000
+
+50
+
+50
+
+900
+
+50
+
+70
+
+800
+
+10
+
+200
+
+SAMPLE OUTPUT:
+
+In Flipkart: Rs.550
+
+In Snapdeal: Rs.520
+
+In Amazon: Rs.920
+
+He will prefer Snapdeal
+
+***************************************************************************************************
+
+Q-4: BMI
+
+You are so much interested in making your body fit and hence you wanted to go to the gym daily. But your mother did not like the idea. She says she will let you go if your weight is not normal. So you decided to calculate your Body Mass Index. Write a C program to calculate BMI for your weight and height. Enter your height in centimeters and weight in kilograms. INPUT & OUTPUT FORMAT: Input consists of 2 float values. First input corresponds to your weight. Second input corresponds to your height. If you are underweight, display “You are underweight. Have an apple daily.” If you are normal, display “You are normal. Go for a walk every day and maintain it.” If you are overweight, display “You are overweight. Go to the gym daily.” If you have obesity, display “You are obese. You need to see a doctor.”
+
+SAMPLE INPUT:
+
+75
+
+175
+
+SAMPLE OUTPUT:
+
+You are normal. Go walking daily and maintain it.
+
+Case 2
+
+Input (stdin)
+
+100
+250
+
+
+Output (stdout)
+
+You are underweight. Have an apple daily.
+
+Case 3
+
+Input (stdin)
+
+150
+100
+Output (stdout)
+
+You are obese. Go to doctor
+
+***************************************************************************************************
+
+Q-5 : Tank
+
+Bala has a cylindrical tank in which he has to fill water in certain hours. For every one hour, his house will receive N liters of water from the corporation. Find out whether he will be able to fill the tank with water in X hours. The radius and height of the cylinder are given as the input. INPUT & OUTPUT FORMAT: Input consists of 4 float values. First input corresponds to the radius of the tank. Second input corresponds to the height of the tank. Third input corresponds to the amount of water the tank receives every hour. Fourth input corresponds to the total number of hours the tank receives water.
+
+SAMPLE INPUT:
+
+5
+
+7
+
+100
+
+6
+
+SAMPLE OUTPUT:
+
+The tank can be filled within 6.0 hours
+
+Case 2
+
+Input (stdin)
+
+8
+5
+50
+3
+Output (stdout)
+
+The tank cannot be filled within 3.0 hours
+
+#####################
+
+1
+
+ 
+
+#include<stdio.h>
+
+int main()
+
+{
+
+  int a, b, c, d, e, f;
+
+  scanf("%d %d %d %d %d %d", &a, &b, &c, &d, &e, &f);
+
+  if(a*b > (c *d)  && a*b > (e *f))
+
+    printf("Raj can fix both painting");
+
+  else
+
+    printf("Raj cannot fix both painting");
+
+}
+
+ 
+
+################################################
+
+2
+
+ 
+
+#include<stdio.h>
+
+int main()
+
+{
+
+  int sal, bank, hostel, food, parents, exp;
+
+  scanf("%d %d %d %d %d", &sal, &bank, &hostel, &food, &parents);
+
+  exp = bank + hostel + food + parents;
+
+  if(sal > exp){
+
+    printf("He can save the money");
+
+  }
+
+  else{
+
+    printf("He has to work hard");
+
+  }
+
+}
+
+ 
+
+###################################################
+
+3
+
+ 
+
+#include<stdio.h>
+
+int main()
+
+{
+
+  int p1, d1, s1, p2, d2, s2, p3, d3, s3;
+
+  float price1, price2, price3;
+
+  float dis1, dis2, dis3;
+
+  scanf("%d %d %d %d %d %d %d %d %d", &p1, &d1, &s1, &p2, &d2, &s2, &p3, &d3, &s3);
+
+  dis1 = (float)d1/100;
+
+  dis2 = (float)d2/100;
+
+  dis3 = (float)d3/100;
+
+  price1 = p1 * dis1;
+
+  price1 = p1 - price1;
+
+  price2 = p2 * dis2;
+
+  price2 = p2 - price2;
+
+  price3 = p3 * dis3;
+
+  price3 = p3 - price3;
+
+  price1 += s1;
+
+  price2 += s2;
+
+  price3 += s3;
+
+  p1 = price1;
+
+  p2 = price2;
+
+  p3 = price3;
+
+  printf("In Flipkart: Rs.%d\n", p1);
+
+  printf("In Snapdeal: Rs.%d\n", p2);
+
+  printf("In Amazon: Rs.%d\n", p3);
+
+  if(price1 < price2){
+
+    if(price1 < price3){
+
+      printf("He will prefer Flipkart");
+
+      return 0;
+
+    }
+
+    else if(price2 < price3){
+
+      printf("He will prefer Snapdeal");
+
+      return 0;
+
+    }
+
+  }
+
+  else{
+
+    if(price2 < price3){
+
+      printf("He will prefer Snapdeal");
+
+      return 0;
+
+    }
+
+    else if(price3 < price1){
+
+      printf("He will prefer Amazon");
+
+      return 0;
+
+    }
+
+  }
+
+}
+
+ 
+
+################################################
+
+4
+
+ 
+
+#include<stdio.h>
+
+int main()
+
+{
+
+  float wt, ht, ratio;
+
+  scanf("%f %f", &wt, &ht);
+
+  ratio = ht/wt;
+
+  if(ratio>=1 && ratio<2.5){
+
+    printf("You are normal. Go walking daily and maintain it.");
+
+    return 0;
+
+  }
+
+  else if(ratio >= 2.5){
+
+    printf("You are underweight. Have an apple daily.");
+
+    return 0;
+
+  }
+
+  printf("You are obese. Go to doctor");
+
+  return 0;
+
+}
+
+ 
+
+###################################################################
+
+5
+
+ 
+
+#include<stdio.h>
+
+int main()
+
+{
+
+  float r, ht, a, total, vol, n;
+
+  int n1, n2;
+
+  scanf("%f %f %f %f", &r, &ht, &a, &total);
+
+  vol = 3.416 * r * r * ht;
+
+  n = vol / a;
+
+  if(n<=total){
+
+    printf("The tank can be filled within %.1f hours", total);
+
+  }
+
+  else{
+
+    printf("The tank cannot be filled within %.1f hours", total);
+
+  }
+
+  return 0;
+
+}
+
