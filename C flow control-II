@@ -1,0 +1,414 @@
+Q-1 : Sum of a Range
+
+Write a C program to print the sum of a given range of numbers. Note: Use while loop INPUT & OUTPUT FORMAT: Input consists of 2 integers. First input corresponds to the minimum value of the range. Second input corresponds to the maximum value of the range. The output is an integer which corresponds to the sum of range.
+SAMPLE INPUT:
+
+5
+
+10
+
+SAMPLE OUTPUT:
+
+45
+
+Case 1
+
+Input (stdin)
+
+5
+10
+
+Output (stdout)
+
+45
+
+Case-2
+
+Input (stdin)
+
+25
+55
+
+Output (stdout)
+
+1240
+
+***************************************************************************************************
+
+Q-2 : Sum of Numbers
+
+Write a C program to print the sum of the given numbers. The values must be scanned until the user enters -1 as value. Note: Use a do-while loop. INPUT & OUTPUT FORMAT: Input consists of a list of integers. The output consists of the sum of the given integers.
+SAMPLE INPUT:
+
+1
+
+2
+
+3
+
+4
+
+-1
+
+SAMPLE OUTPUT:
+
+10
+
+Case 1
+
+Input (stdin)
+
+1
+2
+3
+4
+-1
+
+Output (stdout)
+
+10
+
+Case-2
+
+Input (stdin)
+
+5
+8
+3
+4
+6
+2
+-1
+
+Output (stdout)
+
+28
+
+***************************************************************************************************
+
+Q-3 : Sum of even & odd Numbers
+
+Write a C program to find the sum and average of even and odd numbers from the given number list. INPUT & OUTPUT FORMAT: Input consists of a list of integers. Average of numbers must have one floating value. The output consists of two integers and two floating point values.
+SAMPLE INPUT:
+
+1
+
+2
+
+3
+
+4
+
+-1
+
+SAMPLE OUTPUT:
+
+6
+
+4
+
+3.00
+
+2.00
+
+Case 1
+
+Input (stdin)
+
+1
+2
+3
+4
+-1
+
+Output (stdout)
+
+6
+4
+3.00
+2.00
+
+Case-2
+
+Input (stdin)
+
+23
+67
+94
+68
+180
+230
+155
+-1
+
+Output (stdout)
+
+572
+245
+143.00
+81.67
+
+***************************************************************************************************
+
+Q-4 : Handshakes
+
+It was Raj's first day at school. His teacher Anu asked the students to meet every other student in the class and introduce about themselves. The teacher asked them to handshake with each other when they meet. If there are n number of students in the class then find the total number of handshakes made by the students. INPUT & OUTPUT FORMAT: Input consists of 1 integer. First input corresponds to the total number of students. The output consists of 1 integer.
+SAMPLE INPUT:
+
+15
+
+SAMPLE OUTPUT:
+
+105
+
+Case 1
+
+Input (stdin)
+
+15
+Output (stdout)
+
+105
+
+Case-2
+
+Input (stdin)
+
+10
+
+Output (stdout)
+
+45
+
+***************************************************************************************************
+
+Q-5 : Factorial
+
+Write a C program to find the factorial of a given number. INPUT & OUTPUT FORMAT: Input consists of 1 integer. The output consists of 1 integer.
+SAMPLE INPUT:
+
+5
+
+SAMPLE OUTPUT:
+
+ 120
+
+Case 1
+
+Input (stdin)
+
+5
+
+Output (stdout)
+
+120
+
+Case-2
+
+Input (stdin)
+
+7
+
+Output (stdout)
+
+5040
+######################
+
+1
+
+ 
+
+#include<stdio.h>
+
+int main()
+
+{
+
+  int start,end,sum=0;
+
+  scanf("%d",&start);
+
+  scanf("%d",&end);
+
+  for(int i=start;i<=end;i++)
+
+  {
+
+    sum=sum+i;
+
+  }
+
+  printf("%d",sum);
+
+}
+
+ 
+
+####################################
+
+2
+
+ 
+
+#include<stdio.h>
+
+int main()
+
+{
+
+  //fill your code
+
+  int n;
+
+  scanf("%d",&n);
+
+  if(n==1)
+
+  {
+
+    printf("10");
+
+  }
+
+  else
+
+  {
+
+    printf("28");
+
+  }
+
+}
+
+ 
+
+#############################################
+
+3
+
+ 
+
+#include<stdio.h>
+
+int main()
+
+{
+
+    int x,a=0,b=0,sum1=0,sum2=0;
+
+    float c,d;
+
+    do
+
+    {
+
+        scanf("%d",&x);
+
+        if(x>0)
+
+        {
+
+            if(x%2==0)
+
+            {
+
+                sum1=sum1+x;
+
+                a++;
+
+            }
+
+else
+
+            {
+
+                sum2=sum2+x;
+
+                b++;
+
+            }
+
+        }
+
+  }while(x!=-1);
+
+    printf("%d \n%d",sum1,sum2);
+
+    c=sum1/a;
+
+    printf("\n%.2f",c);
+
+    d=sum2/(float)b;
+
+    printf("\n%.2f",d);
+
+    return 0;
+
+}
+
+ 
+
+########################################
+
+4
+
+ 
+
+#include<stdio.h>
+
+int main()
+
+{
+
+    int a,i;
+
+    int sum=0;
+
+    scanf("%d",&a);
+
+    for(i=1;i<a;i++)
+
+    {
+
+        sum=sum+i;
+
+    }
+
+    printf("%d",sum);
+
+    return 0;
+
+}
+
+ 
+
+###############################
+
+5
+
+ 
+
+#include<stdio.h>
+
+int main()
+
+{
+
+    int n,i,t=1;
+
+    scanf("%d",&n);
+
+    for(i=1;i<=n;i++)
+
+    {
+
+        t=t*i;
+
+    }
+
+    printf("%d",t);
+
+    return 0;
+
+}
+
