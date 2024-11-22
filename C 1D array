@@ -1,0 +1,472 @@
+Q1. Print the values
+
+Aadhi is learning storage structure with the help of Ragavi. Ragavi's first task is to make Aadhi understand the concept of arrays by asking Aadhi to create an array dynamically and get the inputs into the array and print the array. As Aadhi had confusion, he has approached you for help. Help Aadhi by writing a program to create an array, get inputs and print the inputs. FUNCTIONAL REQUIREMENTS: void print(int, int *);
+INPUT & OUTPUT FORMAT:
+
+The first line corresponds to the size of the array n.
+
+The next line corresponds to the number of inputs.
+
+The output consists of the elements in the array.
+
+SAMPLE INPUT: 
+
+3
+
+1
+
+2
+
+3
+
+SAMPLE OUTPUT:
+
+1
+
+2
+
+3
+
+*************************************************************************************************
+
+Q2. Count odd and even
+
+Write a C program to count the number of even and odd elements in an array. FUNCTIONAL REQUIREMENTS: int countEven(int , int *); int countOdd(int , int *);
+INPUT & OUTPUT FORMAT:
+
+case-2:
+
+Input (stdin)
+
+3
+1
+2
+3
+
+
+Output (stdout)
+
+Odd: 2
+Even: 1
+
+ 
+
+Input consists of 1 integer and 1 array.
+
+Integer corresponds to the size of the array.
+
+The output consists of integers
+
+Case-1:
+
+SAMPLE INPUT:
+
+3
+
+1
+
+2
+
+3
+
+SAMPLE OUTPUT:
+
+Odd: 2
+
+Even: 1
+
+********************************************************************************************
+
+Q3. Maximum value
+
+Case-2:
+
+Input (stdin)
+
+3
+101
+210
+90
+
+
+Output (stdout)
+
+210
+
+ 
+
+Write a C program to find the maximum element in an array. FUNCTIONAL REQUIREMENTS: int maximum(int, int *);
+INPUT FORMAT:
+
+Input consists of 1 integer and 1 array.
+
+Integer corresponds to the size of the array.
+
+Case 1:
+
+SAMPLE INPUT:
+
+5
+
+1
+
+2
+
+33
+
+4
+
+5
+
+SAMPLE OUTPUT:
+
+33
+
+***************************************************************************
+
+Q4. Sum of elements
+
+Case 2:
+
+nput (stdin)
+
+5
+1
+2
+3
+4
+5
+
+Output (stdout)
+
+15
+
+ 
+
+QUESTION: Write a C program to find the sum of elements in an array. FUNCTIONAL REQUIREMENTS: int sumOfElements(int, int *);
+INPUT & OUTPUT FORMAT:
+
+Input consists of 1 integer and 1 array.
+
+Integer corresponds to the size of the array
+
+The output consists of an integer.
+
+Case 1:
+
+SAMPLE INPUT:
+
+ 3
+
+ 1
+
+ 2
+
+ 3
+
+SAMPLE OUTPUT:
+
+6
+
+***********************************************************************************************
+
+Q5. Same or Not
+
+Write a C program to find whether the two arrays are the same or not. Two arrays are said to be the same if the sum of both the arrays is the same and the size of arrays is the same. FUNCTIONAL REQUIREMENTS: int findsame(int*,int); int* createarray(int); void getelements(int*,int);
+INPUT FORMAT:
+
+Case 2:
+
+Input (stdin)
+
+3
+3
+1
+2
+1
+2
+3
+6
+
+
+Output (stdout)
+
+Not Same
+
+ 
+
+Input consists of 2 integers and 2 arrays.
+
+Integers correspond to the size of arrays.
+
+If two arrays are same, display "Same" else display "Not Same"
+
+Case 1:
+
+SAMPLE INPUT:
+
+3
+
+3
+
+1
+
+2
+
+3
+
+1
+
+2
+
+3
+
+SAMPLE OUTPUT:
+
+Same
+
+##########
+
+1
+
+ 
+
+#include <stdio.h>
+
+#define MAX_SIZE 1000 // Maximum array size
+
+int main()
+
+{
+
+    int arr[MAX_SIZE]; // Declare an array of MAX_SIZE
+
+    int i, N;
+
+    /* Input array size */
+
+    scanf("%d", &N);
+
+    /* Input elements in array */
+
+    for(i=0; i<N; i++)
+
+    {
+
+        scanf("%d", &arr[i]);
+
+    }
+
+     /*
+
+     * Print all elements of array
+
+     */
+
+    for(i=0; i<N; i++)
+
+    {
+
+        printf("%d\n", arr[i]);
+
+    }
+
+    return 0;
+
+}
+
+ 
+
+############################
+
+2
+
+ 
+
+#include<stdio.h>
+
+int main()
+
+{
+
+ int Size, i, a[10];
+
+ int Even_Count = 0, Odd_Count = 0;
+
+ scanf("%d", &Size);
+
+ for(i = 0; i < Size; i++)
+
+ {
+
+   scanf("%d", &a[i]);
+
+ }
+
+ for(i = 0; i < Size; i ++)
+
+ {
+
+   if(a[i] % 2 != 0)
+
+   {
+
+     Odd_Count++;
+
+   }
+
+   else
+
+   {
+
+     Even_Count++;
+
+   }
+
+ }
+
+ printf("Odd: %d\n", Odd_Count);
+
+ printf("Even: %d", Even_Count);
+
+ return 0;
+
+}
+
+ 
+
+###################################
+
+3
+
+ 
+
+#include <stdio.h>
+
+int main()
+
+{
+
+  int array[100], size, c, location = 0;
+
+  scanf("%d", &size);
+
+  for (c = 0; c < size; c++)
+
+    scanf("%d", &array[c]);
+
+  for (c = 1; c < size; c++)
+
+    if (array[c] > array[location])
+
+      location = c;
+
+  printf("%d",  array[location]);
+
+  return 0;
+
+}
+
+ 
+
+##############################
+
+4
+
+ 
+
+#include <stdio.h>
+
+int main()
+
+{
+
+    int a[1000],i,n,sum=0;
+
+    scanf("%d",&n);
+
+    for(i=0; i<n; i++)
+
+    {
+
+        scanf("%d",&a[i]);
+
+    }
+
+    for(i=0; i<n; i++)
+
+    {
+
+        sum+=a[i];
+
+    }
+
+     printf("%d",sum);
+
+    return 0;
+
+}
+
+ 
+
+###############################
+
+5
+
+ 
+
+#include<stdio.h>
+
+int main()
+
+{int r,c,count=0;
+
+  scanf("%d %d",&r,&c);
+
+  int a[r],b[c];
+
+  for(int i=0;i<r;i++)
+
+  {
+
+    scanf("%d",&a[i]);
+
+  }
+
+  for(int j=0;j<c;j++)
+
+  {
+
+    scanf("%d",&b[j]);
+
+  }
+
+  for(int i=0;i<r;i++)
+
+  {
+
+    for(int j=i;j<=i;j++)
+
+    {
+
+      if(a[i]==b[j])
+
+      {
+
+        count++;
+
+      }
+
+    }
+
+  }
+
+  if(count==r)
+
+    printf("Same");
+
+  else
+
+printf("Not Same");
+
+}
