@@ -1,1 +1,453 @@
 
+Q-1 : Hello World
+
+We all know that the input and output functionality forms the basics of any programming language. As a universal practice, let us begin with this - Write a program to print "Hello World!".
+
+
+Case 1
+
+Input (stdin)
+
+Hello World!
+
+
+Output (stdout)
+
+Hello World!
+
+
+
+Q-2 : Print the output with a new line
+
+Write a C program to print the below-given output. SAMPLE OUTPUT: Hello! Welcome to Face!
+
+
+Case 1
+
+Input (stdin)
+
+Hello!
+Welcome to Face!
+
+
+Output (stdout)
+
+Hello!
+Welcome to Face!
+
+
+
+Q-3 : Integer
+
+Write a program to get an integer from the user and display it. INPUT & OUTPUT FORMAT: Input consist of 1 integer. Output consist of 1 integer.
+
+
+SAMPLE INPUT & OUTPUT:
+
+Case 1
+
+Input (stdin)
+
+56
+
+Output (stdout)
+
+56
+
+Case 2
+
+Input (stdin)
+
+8
+Output (stdout)
+
+8
+
+Case 3
+
+Input (stdin)
+
+28
+Output (stdout)
+
+28
+
+ 
+
+Q-4 : Floating Point
+
+Write a program to get a float value from the user and display it.
+
+
+SAMPLE INPUT & OUTPUT 1:
+
+23.115
+
+23.115000
+
+SAMPLE INPUT & OUTPUT 2:
+
+8
+
+8.000000
+
+Case 1
+
+Input (stdin)
+
+8
+Output (stdout)
+
+8.000000
+
+
+
+Q-5 : Character
+
+Write a program to get a character value from the user and display it. INPUT & OUTPUT FORMAT: Input consists of 1 character. Output consists of 1 character.
+
+
+Case 1
+
+Input (stdin)
+
+d
+
+Output (stdout)
+
+ d
+
+Case 2
+
+Input (stdin)
+
+g
+
+Output (stdout)
+
+g
+
+Case 3
+
+Input (stdin)
+
+t
+
+Output (stdout)
+
+t
+
+
+
+Q-6 : Round Off
+
+Write a C program to get a float value from the user and display it in the below-mentioned format. HINT: Use ceil() and floor() functions from header file. INPUT & OUTPUT FORMAT: Input consists of one float value. Output consists of one integer, its highest round off value and its lowest round off value.
+
+SAMPLE INPUT & OUTPUT:
+
+54.5
+
+54
+
+55.0
+
+54.0
+
+Case 1
+
+Input (stdin)
+
+54.5
+
+
+Output (stdout)
+
+54
+55.0
+54.0
+
+
+
+Q-7 : Print ASCII Values
+
+Write a C program to generate the equivalent ASCII value for a given character.
+
+SAMPLE INPUT & OUTPUT 1:
+
+A
+
+65
+
+SAMPLE INPUT & OUTPUT 2:
+
+a
+
+97
+
+Case 1
+
+Input (stdin)
+
+A
+Output (stdout)
+
+65
+
+Case 2
+
+Input (stdin)
+
+a
+Output (stdout)
+
+97
+
+
+
+Q-8 : Tsunami Report
+
+In Japan, there was a very huge Tsunami. Millions and millions worth buildings and property were destroyed. Many people lost their lives while some of them were injured and few were safe. A news reporter arrives at the spot to take the current survey regarding the situation of the people alive, dead and injured. He wanted to publish it in the newspaper and reach out to other countries asking to help the affected people. Can you please help him in this noble cause by writing a program to generate the newspaper report ? 
+
+INPUT & OUTPUT FORMAT: Input consists of three integers corresponding to the number of people dead, injured and those who are still alive and safe. Refer sample input and output for formatting specifications.
+
+SAMPLE INPUT:
+
+2000
+
+3000
+
+10000
+
+SAMPLE OUTPUT:
+
+1)Dead : 2000
+
+2)Injured : 3000
+
+3)Safe : 10000
+
+Please help the people who are suffering!!!
+
+Case 1
+
+Input (stdin)
+
+2000
+3000
+10000
+
+
+ 
+
+Output (stdout)
+
+1)Dead : 2000
+2)Injured : 3000
+3)Safe : 10000
+Please help the people who are suffering!!!
+
+
+  
+Input and Output
+
+###################
+
+1
+
+
+
+#include<stdio.h>
+
+int main()
+
+{
+
+  printf("Hello World!");
+
+  return 0;
+
+}
+
+ 
+
+#######################################################
+
+2
+
+ 
+
+#include<stdio.h>
+
+int main()
+
+{
+
+  printf("Hello!\n");
+
+  printf("Welcome to Face!");
+
+  return 0;
+
+}
+
+ 
+
+#######################################################
+
+3
+
+ 
+
+#include<stdio.h>
+
+int main()
+
+{
+
+  int a;
+
+  scanf("%d",&a);
+
+  printf("%d",a);
+
+}
+
+ 
+
+#######################################################
+
+4
+
+ 
+
+#include<stdio.h>
+
+int main()
+
+{
+
+  float a;
+
+  scanf("%f",&a);
+
+  printf("%f",a);
+
+}
+
+ 
+
+#######################################################
+
+5
+
+ 
+
+#include<stdio.h>
+
+int main()
+
+{
+
+  char a;
+
+  scanf("%c",&a);
+
+  printf("%c",a);
+
+}
+
+ 
+
+#######################################################
+
+6
+
+ 
+
+#include<stdio.h>
+
+#include<math.h>
+
+int main()
+
+{
+
+  float Val;
+
+  float fVal,cVal;
+
+  scanf("%f",&Val);
+
+  cVal=ceil(Val);
+
+  fVal=floor(Val);
+
+  printf("%.f \n%.01f \n%.01f\n",Val,cVal,fVal);
+
+  return 0;
+
+}
+
+ 
+
+#######################################################
+
+
+
+7
+
+ 
+
+#include<stdio.h>
+
+int main()
+
+{char a;
+
+ scanf("%c",&a);
+
+ printf("%d",a);
+
+}
+
+ 
+
+ 
+
+ 
+
+ 
+
+#######################################################
+
+
+
+8
+
+ 
+
+#include<stdio.h>
+
+int main()
+
+{
+
+int Dead,Injured,Safe;
+
+  scanf("%d",&Dead);
+
+  scanf("%d",&Injured);
+
+  scanf("%d",&Safe);
+
+  printf("1)Dead : %d\n",Dead);
+
+  printf("2)Injured : %d\n",Injured);
+
+  printf("3)Safe : %d\n",Safe);
+
+  printf("Please help the people who are suffering!!!");
+
+}
+
+
