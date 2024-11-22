@@ -1,0 +1,295 @@
+Q1. Addition of first n numbers
+
+Write a C program to find the sum of first 'n' natural numbers by recursion. INPUT & OUTPUT FORMAT: The input corresponds to the value of n. The output corresponds to the sum of the values up to n.
+
+SAMPLE INPUT:
+
+5
+
+SAMPLE OUTPUT:
+
+15
+
+***************************************************************************************************
+
+Q2. Prime Number
+
+Write a C program to find whether the given number is a prime number or not using recursion.
+
+SAMPLE INPUT:
+
+13
+
+SAMPLE OUTPUT:
+
+13 is a prime number
+
+********************************************************************************************
+
+Q3. Decimal to Binary
+
+Write a C program to convert a decimal number to a binary number by recursion.
+
+SAMPLE INPUT:
+
+10
+
+SAMPLE OUTPUT:
+
+1010
+
+********************************************************************************************
+
+Q4. Power of a Number
+
+Write a C program to find the power of a number using recursion.
+
+SAMPLE INPUT:
+
+5
+
+2
+
+SAMPLE OUTPUT:
+
+25
+
+********************************************************************************************
+
+Q5. Largest Element
+
+Write a C program to find the largest element of an array using recursion.
+
+SAMPLE INPUT:
+
+ 
+
+5
+
+1
+
+2
+
+3
+
+65
+
+4
+
+SAMPLE OUTPUT:
+
+65
+
+###########
+
+1
+
+ 
+
+#include<stdio.h>
+
+int sum(int n)
+
+{
+
+    if(n != 0)
+
+        return n + sum(n - 1);
+
+  else
+
+    return 0;
+
+}
+
+int main()
+
+{
+
+    int n,result;
+
+   scanf("%d",&n);
+
+  result=sum(n);
+
+    printf("%d",result);
+
+    return 0;
+
+}
+
+ 
+
+################################
+
+2
+
+ 
+
+#include <stdio.h>
+
+int main() {
+
+    int n, i, flag = 0;  
+
+    scanf("%d", &n);
+
+    for (i = 2; i <= n / 2; ++i) {
+
+        // condition for non-prime
+
+        if (n % i == 0) {
+
+            flag = 1;
+
+            break;
+
+        }
+
+    }
+
+    if (n == 1) {
+
+        printf("1 is neither prime nor composite");
+
+    }
+
+    else {
+
+        if (flag == 0)
+
+            printf("%d is a prime number", n);
+
+        else
+
+            printf("%d is not a prime number", n);
+
+    }
+
+}
+
+ 
+
+################################
+
+3
+
+ 
+
+#include<stdio.h>
+
+int convert(int dec)
+
+{
+
+    if (dec == 0)
+
+    {
+
+        return 0;
+
+    }
+
+    else
+
+    {
+
+        return (dec % 2 + 10 * convert(dec / 2));
+
+    }
+
+}
+
+int main()
+
+{
+
+    int dec, bin;
+
+scanf("%d",&dec);
+
+    bin = convert(dec);
+
+   printf("%d",bin);
+
+    return 0;
+
+}
+
+ 
+
+#############################
+
+4
+
+ 
+
+#include <stdio.h>
+
+int power(int n1, int n2);
+
+int main() {
+
+    int base, a, result; 
+
+    scanf("%d", &base);
+
+    scanf("%d", &a);
+
+    result = power(base, a);
+
+    printf("%d", result);
+
+    return 0;
+
+}
+
+int power(int base, int a) {
+
+    if (a != 0)
+
+        return (base * power(base, a - 1));
+
+    else
+
+        return 1;
+
+}
+
+ 
+
+##########################
+
+5
+
+ 
+
+#include<stdio.h>
+
+int main()
+
+{
+
+  int n;
+
+  scanf("%d",&n);
+
+  int arr[n];
+
+  int max=0;
+
+  for(int i=0;i<n;i++){
+
+  scanf("%d",&arr[i]);
+
+    if(max<arr[i]){
+
+    max=arr[i];
+
+    }
+
+  }
+
+  printf("%d",max);
+
+}
