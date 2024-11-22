@@ -1,0 +1,235 @@
+Q1. Print the string
+
+Write a C program to scan a string from the user and to print it. INPUT FORMAT: Input consists of 1 string.
+
+SAMPLE INPUT:
+
+Face
+
+SAMPLE OUTPUT:
+
+The string is Face
+
+*******************************************************************************************
+
+Q2. String copy
+
+Write a C program to copy a string from one variable to other using string library functions. INPUT FORMAT: Input consists of 1 string.
+SAMPLE INPUT :
+
+hello 
+
+SAMPLE OUTPUT:
+
+The copied string is hello. 
+
+****************************************************************************************
+
+Q3. String compare
+
+Write a C program to find whether the given two strings are the same or not using string library functions. INPUT & OUTPUT FORMAT: Input consists of 2 strings. If two strings are same, display “Strings are same”, else display “Strings are not same”.
+
+SAMPLE INPUT :
+
+face 
+
+face 
+
+SAMPLE OUTPUT:
+
+Strings are same
+
+*******************************************************************************************
+
+Q4. String concatenation
+
+Write a C program to find the concatenation of the given two strings using string library functions. INPUT FORMAT: Input consists of 2 strings.
+
+SAMPLE INPUT :
+
+Face
+
+focus 
+
+SAMPLE OUTPUT:
+
+The concatenated string is Facefocus
+
+***************************************************************************************
+
+Q5. String uppercase
+
+Write a C program to change the given string to uppercase without using string library functions. INPUT & OUTPUT FORMAT: Input consists of 1 string. Output print the Uppercase of given string.
+
+SAMPLE INPUT :
+
+good 
+
+SAMPLE OUTPUT:
+
+String in uppercase is GOOD 
+
+###########
+
+1
+
+ 
+
+#include <stdio.h>
+
+int main(){
+
+    char inputString[100];
+
+    printf("The string is ");
+
+    /* Read string from user using scanf and
+
+    store it in inputString char array */
+
+    scanf("%s", inputString);
+
+    /* Print string stored in inputString using printf */
+
+    printf("%s", inputString);
+
+    return 0;
+
+}
+
+ 
+
+##############################
+
+2
+
+ 
+
+#include <stdio.h>
+
+int main() {
+
+   char s1[100];      // String Given
+
+   char s2[8];                   // Variable to hold value
+
+scanf("%s",&s1);
+
+   int length = 0;
+
+   while(s1[length] != '\0') {
+
+      s2[length] = s1[length];
+
+      length++;
+
+   }
+
+   s2[length] = '\0';           // Terminate the string
+
+   printf("The copied string is %s.\n", s1);
+
+   return 0;
+
+}
+
+ 
+
+#################################
+
+3
+
+ 
+
+#include<stdio.h>
+
+int main()
+
+{
+
+  char s1[100];
+
+  char s2[100];
+
+  int f=0;
+
+  scanf("%s",&s1);
+
+  scanf("%s",&s2);
+
+  for(int i=0;s1[i]!='\0'&&s2[i]!='\0';i++){
+
+  if(s1[i]!=s2[i]) {
+
+    f=1;break;
+
+  }
+
+  }
+
+  if(f==0) printf("Strings are same");
+
+  else printf("Strings are not same") ;
+
+}
+
+ 
+
+################################
+
+4
+
+ 
+
+#include<stdio.h>
+
+int main()
+
+{
+
+  char s1[100],s2[100];
+
+  scanf("%s",&s1);
+
+  scanf("%s",&s2);
+
+  printf("The concatenated string is %s%s ",s1,s2);
+
+}
+
+ 
+
+########################
+
+5
+
+ 
+
+#include<stdio.h>
+
+#include<ctype.h>
+
+int main()
+
+{
+
+  char s[100];
+
+  scanf("%s",&s);
+
+  int i=0;
+
+  while (s[i]!='\0') {
+
+    s[i] = toupper(s[i]);
+
+                    i++;
+
+  }
+
+  printf("String in uppercase is %s",s);
+
+}
+
+ 
+
