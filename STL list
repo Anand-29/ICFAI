@@ -16,7 +16,10 @@ int main()
         cout<<i;
     //edit a data
     l.at(0)="ijk";
-    cout<<l
-    return 0;
+    //print front data
+    cout<<l.front();
+    //print last data
+    cout<<l.end();
+return 0;
 }
 //github.com/Anand-29
