@@ -7,19 +7,17 @@ int main()
     //Add a data
     l.push_back("abc");
     l.push_back("def");
-    l.puch_front("ijk");
+    l.push_front("ijk");
     //delete a data
     l.pop_back();
     l.pop_front();
     //print all the data
     for(string i: l)
         cout<<i;
-    //edit a data
-    l.at(0)="ijk";
     //print front data
     cout<<l.front();
     //print last data
-    cout<<l.end();
+    cout<<l.back();
 return 0;
 }
 //github.com/Anand-29
