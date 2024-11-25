@@ -1,0 +1,22 @@
+#include <iostream>
+#include<queue>
+using namespace std;
+int main()
+{
+    queue<string> q;
+    //Add a data
+    q.push("abc");
+    q.push("def");
+    //deletes front  data
+    q.pop();
+    //print all the data
+    for(string i: q)
+        cout<<i;
+    //check if queue is empty or not
+    if(q.empty())
+        cout<<"not empty stack";
+    else
+        cout<<"empty stack";
+    return 0;
+}
+//github.com/Anand-29
