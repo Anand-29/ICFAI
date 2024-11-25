@@ -14,5 +14,9 @@ int main()
         cout<<i;
     //edit a data
     v.at(0)="ijk";
+    //print front data
+    cout<<v.front();
+    //print last data
+    cout<<v.back();
     return 0;
 }
