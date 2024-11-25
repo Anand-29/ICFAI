@@ -1,0 +1,18 @@
+#include <iostream>
+#include<vector>
+using namespace std;
+int main()
+{
+    vector<string> v;
+    //Add a data
+    v.push_back("abc");
+    v.push_back("def");
+    //delete a data
+    v.pop_back();
+    //print all the data
+    for(string i: v)
+        cout<<i;
+    //edit a data
+    v.at(0)="ijk";
+    return 0;
+}
