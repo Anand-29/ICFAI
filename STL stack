@@ -9,16 +9,13 @@ int main()
     s.push("def");
     //delete a data
     s.pop();
-    //print all the data
-    for(string i: s)
-        cout<<i;
-    //stack top data
-    s.top();
-    //check if stack is empty or not
+    //print stack top data
+    cout<<s.top();
+    //check if stack is empty or not(returns 1 if empty)
     if(s.empty())
-        cout<<"not empty stack";
-    else
         cout<<"empty stack";
+    else
+        cout<<"not empty stack";
     return 0;
 }
 //github.com/Anand-29
