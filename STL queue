@@ -1,21 +1,26 @@
-#include <iostream>
+#include<iostream>
 #include<queue>
 using namespace std;
-int main()
-{
+int main(){
+    //declare a vector
     queue<string> q;
-    //Add a data
+    //add the data
     q.push("abc");
     q.push("def");
-    //deletes front  data
+    q.push("ijk");
+    q.push("ABC");
+    //delete a data
     q.pop();
-    //access data 
-    cout<<q.front();
-    //check if queue is empty or not
-    if(q.empty())
-        cout<<"empty stack";
-    else
-        cout<<"not empty stack";
+    //front data
+    cout<<q.front()<<"\n";
+    //print the size
+    cout<<q.size();
+    //print last data
+    cout<<q.back();
+    //print all the data
+    while(q.empty()!=1){
+        cout<<q.front();
+        q.pop();
+    }
     return 0;
-}
-//github.com/Anand-29
+}//github.com/Anand-29
