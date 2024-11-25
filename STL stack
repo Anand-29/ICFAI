@@ -1,0 +1,24 @@
+#include <iostream>
+#include<stack>
+using namespace std;
+int main()
+{
+    stack<string> s;
+    //Add a data
+    s.push("abc");
+    s.push("def");
+    //delete a data
+    s.pop();
+    //print all the data
+    for(string i: s)
+        cout<<i;
+    //stack top data
+    s.top();
+    //check if stack is empty or not
+    if(s.empty())
+        cout<<"not empty stack";
+    else
+        cout<<"empty stack";
+    return 0;
+}
+//github.com/Anand-29
