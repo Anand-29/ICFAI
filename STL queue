@@ -9,14 +9,13 @@ int main()
     q.push("def");
     //deletes front  data
     q.pop();
-    //print all the data
-    for(string i: q)
-        cout<<i;
+    //access data 
+    cout<<q.front();
     //check if queue is empty or not
     if(q.empty())
-        cout<<"not empty stack";
-    else
         cout<<"empty stack";
+    else
+        cout<<"not empty stack";
     return 0;
 }
 //github.com/Anand-29
