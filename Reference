@@ -1,0 +1,19 @@
+#include<iostream>
+#include<vector>
+#include<list>
+#include<stack>
+#include<queue>
+using namespace std;
+int main(){
+  //reference
+  int a=10;
+  //one location shared names(a,ref)
+  int &ref=a;
+  //both a and ref gets updated
+  ref=a+20;
+  cout<<a;  //30
+  a+=10;
+  cout<<ref; //40
+  
+}                   //github.com/Anand-29
+
